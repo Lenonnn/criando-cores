@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript - CSS </title>
+    <style type="text/css">
+        #centro {
+            position: absolute;
+            top: 8px;
+            left: 45%;
+            background-color: black;
+            text-decoration-color: azure;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="centro">
+        <button id="btn" class="botao" onclick="createColor()">Cria Cor</button>
+
+        <div id="app">
+            <div id="bx" class="box">
+            </div>
+        </div>
+
+        <script>
+
+            var boxElement = document.querySelector('.box');
+            btn.onclick = function createColor(cbox) {
+
+                var cbox = document.createElement("div");
+                cbox.style.width = 1290;
+                cbox.style.height = 25;
+                cbox.style.backgroundColor = '#f00';
+                cbox.onmouseover = function () {
+                    cbox.style.backgroundColor = getRandomColor();
+                };
+                document.body.appendChild(cbox);
+                cbox.setAttribute("class", "box");
+                containerBoxElement.appendChild(cbox);
+            }
+            function getRandomColor() {
+                var letters = "0123456789ABCDEF";
+                var color = "#";
+                for (var i = 0; i < 6; i++) {
+                    color += letters[Math.floor(Math.random() * 16)];
+                }
+                return color;
+            }
+            var newColor = getRandomColor(); // #E943F0
+
+        </script>
+
+</body>
+
+</html>
